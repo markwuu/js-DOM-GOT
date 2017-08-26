@@ -10,7 +10,67 @@ Please also use CSS to style up your work
 
 */
 
+var kingdoms = [
 
-var kingdoms = [{ crest: "https://vignette4.wikia.nocookie.net/gameofthrones/images/1/15/House-Arryn-Main-Shield.PNG/revision/latest?cb=20170101094153", house: "House Arryn",region: "The Vale of Arryn",lord: "Robin Arryn", allegiance: "House Stark"},{ crest: "https://vignette1.wikia.nocookie.net/gameofthrones/images/e/e6/House-Frey-Main-Shield.PNG/revision/latest?cb=20170523011255", house: "House Frey",region: "The Riverlands",lord: "Unknown", allegiance: "House Lanister"},{ crest: "https://vignette3.wikia.nocookie.net/gameofthrones/images/8/86/House-Greyjoy-Main-Shield.PNG/revision/latest?cb=20170523015836", house: "House Greyjoy",region: "Iron Islands",lord: "King Euron Greyjoy", allegiance: "Sovereign"},{ crest: "http://awoiaf.westeros.org/images/thumb/d/d5/House_Lannister.svg/250px-House_Lannister.svg.png", house: "House Lannister",region: "The Crownlands",lord: "Queen Cersei", allegiance: "House Targaryen"},{ crest: "http://vignette4.wikia.nocookie.net/gameofthrones/images/8/8a/House-Stark-Main-Shield.PNG/revision/latest?cb=20170101103142", house: "House Stark",region: "The North",lord: "King Jon Snow", allegiance: "Sovereign"},{ crest: "https://vignette2.wikia.nocookie.net/gameofthrones/images/4/43/House-Targaryen-Main-Shield.PNG/revision/latest?cb=20170510235320", house: "House Targaryen",region: "Dragonstone",lord: "Queen Daenerys", allegiance: "Sovereign"}];
+	{crest: "https://vignette4.wikia.nocookie.net/gameofthrones/images/1/15/House-Arryn-Main-Shield.PNG/revision/latest?cb=20170101094153", house: "House Arryn",region: "The Vale of Arryn",lord: "Robin Arryn", allegiance: "House Stark"},
 
+	{crest: "https://vignette1.wikia.nocookie.net/gameofthrones/images/e/e6/House-Frey-Main-Shield.PNG/revision/latest?cb=20170523011255", house: "House Frey",region: "The Riverlands",lord: "Unknown", allegiance: "House Lanister"},
+
+	{ crest: "https://vignette3.wikia.nocookie.net/gameofthrones/images/8/86/House-Greyjoy-Main-Shield.PNG/revision/latest?cb=20170523015836", house: "House Greyjoy",region: "Iron Islands",lord: "King Euron Greyjoy", allegiance: "Sovereign"},
+
+	{ crest: "http://awoiaf.westeros.org/images/thumb/d/d5/House_Lannister.svg/250px-House_Lannister.svg.png", house: "House Lannister",region: "The Crownlands",lord: "Queen Cersei", allegiance: "House Targaryen"},
+
+	{ crest: "http://vignette4.wikia.nocookie.net/gameofthrones/images/8/8a/House-Stark-Main-Shield.PNG/revision/latest?cb=20170101103142", house: "House Stark",region: "The North",lord: "King Jon Snow", allegiance: "Sovereign"},
+
+	{ crest: "https://vignette2.wikia.nocookie.net/gameofthrones/images/4/43/House-Targaryen-Main-Shield.PNG/revision/latest?cb=20170510235320", house: "House Targaryen",region: "Dragonstone",lord: "Queen Daenerys", allegiance: "Sovereign"}];
+
+	// var iDiv = document.createElement('div');
+	// iDiv.id = 'block';
+	// iDiv.className = 'block';
+	// document.getElementsByTagName('body')[0].appendChild(iDiv);
+
+for(var i = 0; i < kingdoms.length; i++){
+
+	//make a div class to hold each separate card
+	// var body = document.getElementsByTagName('body')[0];
+	// var cards = document.createElement('div');
+	// cards.className = "separateHouses";
+	// var x = document.getElementsByTagName('body')[0];
+	// x.appendChild(cards);
+
+	var separateHouses = document.createElement('div');
+	separateHouses.className = "differentHouse";
+	document.body.appendChild(separateHouses);
+
+	var crest = document.createElement('img');
+	crest.className = "picture";
+	crest.src = kingdoms[i].crest;
+	separateHouses.appendChild(crest);
+
+	var house = document.createElement('div');
+	house.className = "House";
+	house.innerHTML = kingdoms[i].house;
+	separateHouses.appendChild(house);
+
+	var region = document.createElement('div');
+	region.className = "Region";
+	region.innerHTML = kingdoms[i].region;
+	separateHouses.appendChild(region);
+
+	var lord = document.createElement('div');
+	lord.className = "Lord";
+	lord.innerHTML = kingdoms[i].lord;
+	separateHouses.appendChild(lord);
+
+	var allegiance = document.createElement('div');
+	allegiance.className = "House";
+	allegiance.innerHTML = kingdoms[i].allegiance;
+	separateHouses.appendChild(allegiance);
+
+	var break1 = document.createElement('br');
+	separateHouses.appendChild(break1);
+	var break2 = document.createElement('br');
+	separateHouses.appendChild(break2);
+
+}
 
