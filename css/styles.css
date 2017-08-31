@@ -1,3 +1,9 @@
+body{
+/*	background-image: url("http://awoiaf.westeros.org/images/thumb/f/f6/Agot_hbo_guide_map.jpg/1500px-Agot_hbo_guide_map.jpg");*/
+
+/*	opacity: 0.5;*/
+}
+
 .differentHouse{
 	font-family: 'Roboto Slab', serif;
 	text-align: center;
@@ -11,17 +17,22 @@
 	padding-top: 1%;
 	padding-bottom: 2%;
 
-	/*background-color: #D19E9E;
+/*	background-color: aqua;
 	-webkit-box-shadow: 10px 11px 14px -2px rgba(255,255,255,1);
 	-moz-box-shadow: 10px 11px 14px -2px rgba(255,255,255,1);
 	box-shadow: 10px 11px 14px -2px rgba(255,255,255,1);*/
 }
 
 #title{
+	opacity: 1;
 	text-align: center;
 	margin-top: 5%;
 	font-family: 'Megrim', cursive;
-	font-size: 100px;
+	font-size: 110px;
+	border-bottom: 3px solid black;
+	padding-bottom: 3%;
+	margin-left: 18%;
+	margin-right: 18%;
 }
 
 .box{
@@ -32,6 +43,7 @@
     width: 188px;
     height: 219px;
     padding: 7px 7px 7px 7px;
+    opacity: 1;
 }
 
 .house{
@@ -56,4 +68,3 @@
 	font-family: 'Megrim', cursive;
 	font-size: 40px;
 }
-
